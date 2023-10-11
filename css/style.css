@@ -1,15 +1,29 @@
 :root {
-
-}
-
-* {
-  box-sizing: border-box;
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-md);
 }
 
 html {
@@ -25,9 +39,207 @@ body {
 }
 
 img {
-  display: block;
+  display: inline;
   max-width: 100%;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#header {
+  background-color: white;
+}
+
+#header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding-right: 1.50em;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #fff;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+  
+.image-grid #item-to-span {
+  grid-column: 1 / 4;
+}
+
+.image-grid-1 {
+  border-radius: 4px;
+}
+
+#dough h2, #review h2, #try-it-with h2 {
+  text-align: center;
+}
+
+#dough {
+  background-color: #fff;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  height: 450px;
+}
+
+#dough p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
 
 
+#review ul {
+  list-style: none;
+  gap: 2em;
+  align-content: center;
+}
+
+#review ul li {
+  max-width: 55%;
+  text-align: center;
+  align-items: center;
+}
+
+#review {
+  background-color: black;
+  color: #fff;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+#review blockquote {
+  align-items: center;
+  text-align: center;
+}
+
+#try-it-with article {
+  background-color: lightgrey;
+  border-radius: 10px 10px 10px 10px;
+  text-align: center;
+  max-width: 500px;
+  align-items: center;
+}
+  
+#try-it-with article img {
+  border-radius: 10px 10px 0px 0px;
+}
+
+#try-it-with {
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.cookie-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3em;
+}
+  
+footer {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+@media only screen and (min-width: 768px){
+  
+  #valentines-day > div {
+    display: flex;
+    gap: 2em;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .image-grid #item-to-span {
+    grid-column: 1 / 1;
+  }
+
+  .cookie-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+  } 
+
+  #dough p {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #review ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 2em;
+  }
+  
+  #review ul li {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (min-width: 960px){
+
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2.5em;
+    gap: 1em;
+  }
+
+  #review ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 2em;
+  }
+  
+  #review ul li {
+    max-width: 80%;
+  }
+
+  .cookie-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+  }
+
+  }
