@@ -104,22 +104,14 @@ nav ul li a:focus {
   height: 450px;
 }
 
-#dough p {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-
-
-#review ul {
+#review ul, #dough ul {
   display: flex;
   flex-direction: column;
   list-style: none;
   gap: 2em;
 }
 
-#review ul li {
+#review ul li, #dough ul li {
   max-width: 90%;
 }
 
@@ -178,6 +170,7 @@ footer {
 
   #valentines-day > div {
     display: flex;
+    flex-direction: column;
     gap: 2em;
   }
 
@@ -197,14 +190,8 @@ footer {
     gap: 1em;
     align-items: center;
   } 
-
-  #dough p {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
   
-  #review ul {
+  #review ul, #dough ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -212,38 +199,49 @@ footer {
     gap: 2em;
   }
   
-  #review ul li {
+  #review ul li, #dough ul li {
     max-width: 80%;
   }
 }
 
 @media only screen and (min-width: 960px){
 
+  .wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  #valentines-day > div {
+    display: flex;
+    gap: 2em;
+  }
 
   .image-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 2.5em;
     gap: 1em;
   }
 
-  #review ul {
+  .image-grid #item-to-span {
+    grid-column: 1 / 1;
+  }
+
+  .cookie-grid {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+  } 
+  
+  #review ul, #dough ul {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     list-style: none;
     gap: 2em;
   }
   
-  #review ul li {
+  #review ul li, #dough ul li {
     max-width: 80%;
   }
-
-  .cookie-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1em;
-    align-items: center;
-  }
-
-  }
+}
