@@ -26,6 +26,10 @@ h3 {
   font-size: var(--font-size-md);
 }
 
+h4 {
+  font-size: var(--font-size-base);
+}
+
 html {
   font-family:'Poppins', sans-serif;
   background-color: #fff;
@@ -36,7 +40,7 @@ html {
 
 body {
   margin: 0;
-}
+} 
 
 img {
   display: inline;
@@ -50,6 +54,7 @@ img {
 
 #header {
   background-color: white;
+  margin: auto;
 }
 
 #header > div {
@@ -78,12 +83,16 @@ nav ul li a:focus {
   color: #fff;
 }
 
+/*@media only screen and (min-width: 600px and below)*/
+
 .image-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
 }
-  
+
+/*Changes 1st picture to main image*/ 
+
 .image-grid #item-to-span {
   grid-column: 1 / 4;
 }
@@ -96,12 +105,30 @@ nav ul li a:focus {
   text-align: center;
 }
 
+.event h1 {
+  margin-top: 0;
+  line-height: 1;
+}
+
+#add-to-cart {
+  color: #fff;
+	background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+	color: white;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
 #dough {
   background-color: #fff;
   background-position: center center;
   display: flex;
-  align-items: center;
-  height: 450px;
+  height: auto;
 }
 
 #review ul, #dough ul {
@@ -112,7 +139,7 @@ nav ul li a:focus {
 }
 
 #review ul li, #dough ul li {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 #review {
@@ -125,12 +152,11 @@ nav ul li a:focus {
 
 #review blockquote {
   align-items: center;
-  text-align: center;
 }
 
 #try-it-with article {
-  background-color: lightgrey;
-  border-radius: 10px 10px 10px 10px;
+  background-color: whitesmoke;
+  border-radius: 10px;
   text-align: center;
   max-width: 500px;
   align-items: center;
@@ -174,6 +200,10 @@ footer {
     gap: 2em;
   }
 
+  .event h1 {
+    margin-top: 0;
+  }
+
   .image-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -204,6 +234,8 @@ footer {
   }
 }
 
+/* Desktop and above */
+
 @media only screen and (min-width: 960px){
 
   .wrapper {
@@ -213,6 +245,7 @@ footer {
 
   #valentines-day > div {
     display: flex;
+    flex-direction: row;
     gap: 2em;
   }
 
@@ -224,6 +257,10 @@ footer {
 
   .image-grid #item-to-span {
     grid-column: 1 / 1;
+  }
+
+  .event h1 {
+    margin-top: 0;
   }
 
   .cookie-grid {
